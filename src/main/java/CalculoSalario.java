@@ -36,13 +36,13 @@ public class CalculoSalario {
     private static void exibirSalarios(double[] salariosBrutos) {
         for (double salariosBruto : salariosBrutos) {
             System.out.println("#########################");
-            System.out.printf("Salario Bruto: R$ %.2f %n", salariosBruto);
+            System.out.printf("Salário Bruto: R$ %.2f %n", salariosBruto);
             double valorINSS = calcularINSS(salariosBruto);
             System.out.printf("Valor de INSS: R$ %.2f %n", valorINSS);
             double impostoRenda = calcularImpostoRenda(salariosBruto);
-            System.out.printf("Valor de Imposto Renda: R$ %.2f %n", impostoRenda);
+            System.out.printf("Valor do Imposto de Renda: R$ %.2f %n", impostoRenda);
             double salarioLiquido = salariosBruto - valorINSS - impostoRenda;
-            System.out.printf("Salario Liquido: R$ %.2f %n", salarioLiquido);
+            System.out.printf("Salário Liquido: R$ %.2f %n", salarioLiquido);
         }
     }
 
@@ -51,7 +51,7 @@ public class CalculoSalario {
         double[] salarios = new double[5];
 
         for (int i = 0; i < salarios.length; i++) {
-            System.out.printf("Digite o %d° salário: ", i + 1);
+            System.out.printf("Digite o valor do %d° salário: ", i + 1);
             salarios[i] = sc.nextDouble();
         }
 
